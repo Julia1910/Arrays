@@ -86,9 +86,9 @@ public class View {
     }
 
     private void outputMenu() {
-        System.out.println("\nMENU:");
+        log.info("\nMENU:");
         for (String str : menu.values()) {
-            System.out.println(str);
+            log.info(str);
         }
     }
 
@@ -96,7 +96,7 @@ public class View {
         String keyMenu;
         do {
             outputMenu();
-            System.out.println("Please, select menu point.");
+            log.info("Please, select menu point.");
             keyMenu = input.nextLine().toUpperCase();
             try {
                 methodsMenu.get(keyMenu).print();
